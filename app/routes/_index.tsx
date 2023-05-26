@@ -1,5 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 
+import logo from '../assets/logo.png'
+
 export const meta: V2_MetaFunction = () => {
   return [
     { title: "Decensha" },
@@ -7,10 +9,18 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
+export function Header() {
+  return (
+    <header>
+      <span><img src={logo} /></span>
+    </header>
+  )
+}
+
 export default function Index() {
   return (
     <div>
-      <h1>Decensha</h1>
+      {Header()}
     </div>
   );
 }
