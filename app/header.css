@@ -1,0 +1,30 @@
+.headerlogo {
+    height: 60px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+.headermenu-cont {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 30px;
+    margin: 0;
+    font-size: 17px;
+    gap: 10px;
+    top: 10px;
+}
+
+.headermenu-cont > li {
+    text-decoration: none;
+    list-style-type: none;
+    position: relative;
+    margin: 0.5em;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    user-select: none;
+    cursor: pointer;
+}

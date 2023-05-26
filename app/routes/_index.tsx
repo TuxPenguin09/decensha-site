@@ -1,5 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 
+import '../header.css'
+
 import logo from '../assets/logo.png'
 
 export const meta: V2_MetaFunction = () => {
@@ -12,7 +14,12 @@ export const meta: V2_MetaFunction = () => {
 export function Header() {
   return (
     <header>
-      <span><img src={logo} /></span>
+      <span><img src={logo} className="headerlogo" /></span>
+      <ul className="headermenu-cont">
+        <li>Download Client</li>
+        <li>Sponsors</li>
+        <li>Server List</li>
+      </ul>
     </header>
   )
 }
