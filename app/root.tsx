@@ -11,10 +11,62 @@ import {
 
 import styles from "./index.css";
 
+import logo from './assets/logo.png'
+import './header.css'
+import './footer.css'
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: styles },
 ];
+
+export function Header() {
+  return (
+    <header>
+      <span><img src={logo} className="headerlogo" /></span>
+      <ul className="headermenu-cont">
+        <li>Download Client</li>
+        <li>Sponsors</li>
+        <li>Server List</li>
+      </ul>
+    </header>
+  )
+}
+
+export function Footer() {
+  return (
+    <footer>
+      <div className="footer-cont">
+        <div className="footer-col">
+          <nav>
+            <ul><span id="footermenu-header">leafstudiosDot</span>
+              <li>Sponsor via Github</li>
+              <li>About</li>
+              <li>hodots.</li>
+              <li>Social</li>
+            </ul>
+
+            <ul><span id="footermenu-header">Resources</span>
+              <li>Documentation</li>
+              <li>Server Source Code</li>
+              <li>Blog</li>
+              <li>Support</li>
+            </ul>
+
+            <ul id="footermenu-decenshanetwork">
+              <span id="footermenu-header">Decensha Network</span>
+              <li>Terms and Conditions</li>
+              <li>Cookies</li>
+              <li>Privacy Policy</li>
+              <li>Linking with Decensha Network</li>
+            </ul>
+          </nav>
+          <span id="footercopyright">© 2023 leafstudiosDot</span>
+        </div>
+      </div>
+    </footer>
+  )
+}
 
 export default function App() {
   return (
@@ -26,10 +78,12 @@ export default function App() {
         <Links />
       </head>
       <body>
+        {Header()}
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        {Footer()}
       </body>
     </html>
   );

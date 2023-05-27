@@ -5,6 +5,10 @@
 
 body {
     font-family: 'Nunito';
+    min-height: 115vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 header {
