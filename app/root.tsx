@@ -40,15 +40,15 @@ export function Footer() {
         <div className="footer-col">
           <nav>
             <ul><span id="footermenu-header">leafstudiosDot</span>
-              <li>Sponsor via Github</li>
-              <li>About</li>
-              <li>hodots.</li>
-              <li>Social</li>
+              <li onClick={() => window.open("https://github.com/sponsors/leafstudiosDot", "_blank")}>Sponsor via Github</li>
+              <li onClick={() => window.open("https://www.leafstudiosdot.co.uk/", "_blank")}>About</li>
+              <li onClick={() => window.open("https://hodots.com", "_blank")}>hodots.</li>
+              <li onClick={() => window.open("https://www.leafstudiosdot.co.uk/social", "_blank")}>Social</li>
             </ul>
 
             <ul><span id="footermenu-header">Resources</span>
               <li>Documentation</li>
-              <li>Server Source Code</li>
+              <li onClick={() => window.open("https://github.com/leafstudiosDot/decensha", "_blank")}>Server Source Code</li>
               <li>Blog</li>
               <li>Support</li>
             </ul>
