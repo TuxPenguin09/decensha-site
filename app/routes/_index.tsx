@@ -1,4 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import "../homepage.css"
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -9,7 +10,8 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
+    <div className="sitebody">
+      <div id="homepage-slogan">A chatroom that are moderated by you, the community, organisations, etc.</div>
     </div>
   );
 }
