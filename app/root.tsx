@@ -7,6 +7,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
+  isRouteErrorResponse,
 } from "@remix-run/react";
 
 import styles from "./index.css";
@@ -79,6 +81,66 @@ export default function App() {
       </head>
       <body>
         {Header()}
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+        {Footer()}
+      </body>
+    </html>
+  );
+}
+
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  // when true, this is what used to go to `CatchBoundary`
+  if (isRouteErrorResponse(error)) {
+    return (
+      <html lang="en">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <title>Not Found</title>
+          <Meta />
+          <Links />
+        </head>
+        <body>
+          {Header()}
+          <div className="sitebody">
+            <h1>404 Page Not Found</h1>
+          </div>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+          {Footer()}
+        </body>
+      </html>
+    );
+  }
+
+  // Don't forget to typecheck with your own logic.
+  // Any value can be thrown, not just errors!
+  let errorMessage = "Unknown error";
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Not Found</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        {Header()}
+        <div className="sitebody">
+          <h1>Uh oh ...</h1>
+          <p>Something went wrong.</p>
+          <pre>{errorMessage}</pre>
+        </div>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
