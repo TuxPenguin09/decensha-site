@@ -10,6 +10,8 @@ footer {
     transform: scaleX(1.013);
     margin-bottom: -200px;
     user-select: none;
+    min-width: 900px;
+    overflow-x: hidden;
 }
 
 .footer-cont {
