@@ -31,6 +31,9 @@ export function Header() {
         <li>Sponsors</li>
         <li>Server List</li>
       </ul>
+      <div className="headermenumob-menubutton">
+      ☰
+      </div>
     </header>
   )
 }

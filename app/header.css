@@ -1,3 +1,28 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    background-color: #ffd4a8;
+    z-index: 1;
+}
+
+.headermenumob-menubutton {
+    display: none;
+    border: #f8995c 2px solid;
+    border-radius: 5px;
+    right: 30px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 13px;
+    text-align: center;
+    font-size: 27px;
+    cursor: pointer;
+}
+
 .headerlogo {
     height: 60px;
     user-select: none;
@@ -27,4 +52,14 @@
     padding-bottom: 5px;
     user-select: none;
     cursor: pointer;
+}
+
+@media (max-width: 980px) {
+    .headermenu-cont > li {
+        display: none;
+    }
+
+    .headermenumob-menubutton {
+        display: block;
+    }
 }
