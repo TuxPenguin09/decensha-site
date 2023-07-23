@@ -9,20 +9,6 @@ header {
     z-index: 1;
 }
 
-.headermenumob-menubutton {
-    display: none;
-    border: #f8995c 2px solid;
-    border-radius: 5px;
-    right: 30px;
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    top: 13px;
-    text-align: center;
-    font-size: 27px;
-    cursor: pointer;
-}
-
 .headerlogo {
     height: 60px;
     user-select: none;
@@ -54,12 +40,55 @@ header {
     cursor: pointer;
 }
 
+.headermenumob-menubutton {
+    display: none;
+    border: #f8995c 2px solid;
+    border-radius: 5px;
+    right: 30px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 13px;
+    text-align: center;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.headermenumob-cont {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 95%;
+    background-color: #ffd4a8;
+    padding: 10px;
+    z-index: 1;
+}
+
+.headermenumob-cont > li {
+    text-decoration: none;
+    list-style-type: none;
+    position: relative;
+    margin: 0.5em;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 @media (max-width: 980px) {
     .headermenu-cont > li {
         display: none;
     }
 
     .headermenumob-menubutton {
+        display: block;
+    }
+
+    .headermenumob-cont {
         display: block;
     }
 }

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
@@ -23,6 +24,7 @@ export const links: LinksFunction = () => [
 ];
 
 export function Header() {
+  const [mobmenuOpen, setMobMenuOpen] = useState(false);
   return (
     <header>
       <span><img src={logo} className="headerlogo" /></span>
@@ -31,9 +33,21 @@ export function Header() {
         <li>Sponsors</li>
         <li>Server List</li>
       </ul>
-      <div className="headermenumob-menubutton">
-      ☰
-      </div>
+      {mobmenuOpen ? (
+        <div className="headermenumob-menubutton" onClick={() => setMobMenuOpen(false)}>
+          X
+        </div>) : (
+        <div className="headermenumob-menubutton" onClick={() => setMobMenuOpen(true)}>
+          ☰
+        </div>
+      )}
+      {mobmenuOpen ? (
+        <ul className="headermenumob-cont">
+          <li>Download Client</li>
+          <li>Sponsors</li>
+          <li>Server List</li>
+        </ul>
+      ) : null}
     </header>
   )
 }
