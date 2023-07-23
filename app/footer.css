@@ -68,3 +68,18 @@ footer {
 #footermenu-decenshanetwork {
     width: 540px;
 }
+
+@media (max-width: 980px) {
+    footer {
+        min-width: auto;
+    }
+
+    .footer-cont {
+        height: 880px;
+        display: flow-root;
+    }
+
+    .footer-col > nav {
+        flex-direction: column;
+    }
+}
