@@ -43,9 +43,9 @@ export function Header() {
       )}
       {mobmenuOpen ? (
         <ul className="headermenumob-cont">
-          <li>Download Client</li>
-          <li>Sponsors</li>
-          <li>Server List</li>
+          <li onClick={() => setMobMenuOpen(false)}>Download Client</li>
+          <li onClick={() => setMobMenuOpen(false)}>Sponsors</li>
+          <li onClick={() => setMobMenuOpen(false)}>Server List</li>
         </ul>
       ) : null}
     </header>
