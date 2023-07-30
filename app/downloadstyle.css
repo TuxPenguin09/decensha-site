@@ -1,0 +1,40 @@
+.download-header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#download-textparam {
+    text-align: center;
+}
+
+#download-platbtns-cont {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#download-platbtns {
+    width: 300px;
+    height: 450px;
+    box-shadow: black 0px 0px 2px;
+    margin: 0px 10px 20px;
+}
+
+#download-platbtns-header {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#download-directbtn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#download-directbtn-in {
+    background-color: #82ff5f;
+    padding: 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    user-select: none;
+    cursor: pointer;
+}
