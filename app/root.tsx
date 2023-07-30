@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -27,7 +28,7 @@ export function Header() {
   const [mobmenuOpen, setMobMenuOpen] = useState(false);
   return (
     <header>
-      <span><img src={logo} className="headerlogo" /></span>
+      <Link to="/"><img src={logo} className="headerlogo" /></Link>
       <ul className="headermenu-cont">
         <li>Download Client</li>
         <li>Sponsors</li>
